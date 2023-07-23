@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { MyTakeComponent } from './app.component';
+import { MyTakeComponent } from './my-take.component';
 
-describe('AppComponent', () => {
+describe('MyTakeComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
     declarations: [MyTakeComponent]

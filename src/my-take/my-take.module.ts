@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { MyTakeComponent } from './app.component';
+import { MyTakeRoutingModule } from './my-take-routing.module';
+import { MyTakeComponent } from './my-take.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { MyTakeComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    MyTakeRoutingModule
   ],
   providers: [],
   bootstrap: [MyTakeComponent]
