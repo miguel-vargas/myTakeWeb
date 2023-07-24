@@ -3,6 +3,7 @@ export class RouterPath {
 	static readonly MY_TAKES = 'my-takes';
 	static readonly LOCATIONS = 'locations';
 	static readonly LOGIN = 'login';
+	static readonly SIGN_UP = 'sign-up';
 }
 
 export const ROUTES = [
