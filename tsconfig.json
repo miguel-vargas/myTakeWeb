@@ -23,7 +23,9 @@
       "dom"
     ],
     "paths": {
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/my-take/shared/*"],
+      "@core/*": ["src/my-take/core/*"],
+      "@features/*": ["src/my-take/features/*"]
     }
   },
   "angularCompilerOptions": {

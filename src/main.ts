@@ -1,7 +1,7 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { MyTakeModule } from './my-take/my-take.module';
+import { CoreModule } from './my-take/core/core.module';
 
 platformBrowserDynamic()
-  .bootstrapModule(MyTakeModule)
+  .bootstrapModule(CoreModule)
   .catch((err) => console.error(err));
