@@ -30,4 +30,6 @@ Object.defineProperty(document.body.style, 'transform', {
   },
 });
 
-HTMLCanvasElement.prototype.getContext = <typeof HTMLCanvasElement.prototype.getContext>jest.fn();
+HTMLCanvasElement.prototype.getContext = <
+  typeof HTMLCanvasElement.prototype.getContext
+>jest.fn();

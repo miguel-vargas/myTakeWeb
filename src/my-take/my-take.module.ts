@@ -5,14 +5,9 @@ import { MyTakeRoutingModule } from './my-take-routing.module';
 import { MyTakeComponent } from './my-take.component';
 
 @NgModule({
-  declarations: [
-    MyTakeComponent
-  ],
-  imports: [
-    BrowserModule,
-    MyTakeRoutingModule
-  ],
+  declarations: [MyTakeComponent],
+  imports: [BrowserModule, MyTakeRoutingModule],
   providers: [],
-  bootstrap: [MyTakeComponent]
+  bootstrap: [MyTakeComponent],
 })
-export class MyTakeModule { }
+export class MyTakeModule {}

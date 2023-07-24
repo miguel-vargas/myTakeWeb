@@ -3,10 +3,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MyTakeComponent } from './my-take.component';
 
 describe('MyTakeComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [MyTakeComponent]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      declarations: [MyTakeComponent],
+    })
+  );
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(MyTakeComponent);
@@ -24,6 +26,8 @@ describe('MyTakeComponent', () => {
     const fixture = TestBed.createComponent(MyTakeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('myTakeWeb app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain(
+      'myTakeWeb app is running!'
+    );
   });
 });
