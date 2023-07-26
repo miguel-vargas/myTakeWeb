@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MaterialModule } from '@shared/modules/material/material.module';
 import { CoreComponent } from './core.component';
@@ -8,15 +8,19 @@ describe('CoreComponent', () => {
 	let component: CoreComponent;
 	let fixture: ComponentFixture<CoreComponent>;
 
-	beforeEach(() => {
+	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [CoreComponent, ToolbarComponent],
 			imports: [MaterialModule, RouterTestingModule],
-		});
-		fixture = TestBed.createComponent(CoreComponent);
-		component = fixture.componentInstance;
-		fixture.detectChanges();
-	});
+		})
+			.compileComponents()
+			.then(() => {
+				fixture = TestBed.createComponent(CoreComponent);
+				component = fixture.componentInstance;
+
+				fixture.detectChanges();
+			});
+	}));
 
 	it('should create', () => {
 		expect(component).toBeTruthy();
