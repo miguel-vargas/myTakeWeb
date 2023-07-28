@@ -22,9 +22,10 @@
 		"types": ["jest"],
 		"esModuleInterop": true,
 		"paths": {
-			"@shared/*": ["src/my-take/shared/*"],
 			"@core/*": ["src/my-take/core/*"],
-			"@features/*": ["src/my-take/features/*"]
+			"@features/*": ["src/my-take/features/*"],
+			"@shared/*": ["src/my-take/shared/*"],
+			"@state/*": ["src/my-take/state/*"]
 		}
 	},
 	"angularCompilerOptions": {
