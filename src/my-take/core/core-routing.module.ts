@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RouterPath } from '@shared/constants/routes';
 import { CoreComponent } from './components/core.component';
 
 const routes: Routes = [
@@ -8,11 +9,16 @@ const routes: Routes = [
 		component: CoreComponent,
 		children: [
 			{
-				path: '',
+				path: RouterPath.DASHBOARD,
 				loadChildren: () =>
 					import('../features/dashboard/dashboard.module').then(
 						(m) => m.DashboardModule
 					),
+			},
+			{
+				path: '',
+				pathMatch: 'full',
+				redirectTo: RouterPath.DASHBOARD,
 			},
 		],
 	},

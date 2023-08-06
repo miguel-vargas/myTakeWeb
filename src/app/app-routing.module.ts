@@ -4,28 +4,20 @@ import { RouterPath } from '@shared/constants/routes';
 
 const routes: Routes = [
 	{
-		path: '',
+		path: RouterPath.APP,
 		loadChildren: () =>
 			import('../my-take/core/core.module').then((m) => m.CoreModule),
 	},
 	{
-		path: RouterPath.LOGIN,
+		path: '',
 		loadChildren: () =>
-			import('../my-take/features/login/login.module').then(
-				(m) => m.LoginModule
-			),
-	},
-	{
-		path: RouterPath.SIGN_UP,
-		loadChildren: () =>
-			import('../my-take/features/sign-up/sign-up.module').then(
-				(m) => m.SignUpModule
+			import('../my-take/external/external.module').then(
+				(m) => m.ExternalModule
 			),
 	},
 	{
 		path: '**',
-		loadChildren: () =>
-			import('../my-take/core/core.module').then((m) => m.CoreModule),
+		redirectTo: '',
 	},
 ];
 
