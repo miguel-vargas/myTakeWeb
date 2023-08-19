@@ -8,5 +8,10 @@
 		</button>
 		<span>myTake</span>
 	</div>
-	<div class="toolbar-section">User stuff</div>
+	<div class="toolbar-section">
+		<button mat-button [matMenuTriggerFor]="menu">Insert Username</button>
+		<mat-menu #menu="matMenu">
+			<a mat-menu-item routerLink="../">Logout</a>
+		</mat-menu>
+	</div>
 </mat-toolbar>
