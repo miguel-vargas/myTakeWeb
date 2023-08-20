@@ -1,0 +1,17 @@
+.toolbar {
+	display: flex;
+	justify-content: space-between;
+
+	.toolbar-section {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.logo {
+	font-size: 1.25rem;
+}
+
+.login-btn {
+	margin-right: 1rem;
+}

@@ -1,6 +1,7 @@
 export class RouterPath {
+	static readonly APP = 'app';
 	static readonly DASHBOARD = 'dashboard';
-	static readonly MY_TAKES = 'my-takes';
+	static readonly MY_TAKES = 'list';
 	static readonly LOCATIONS = 'locations';
 	static readonly LOGIN = 'login';
 	static readonly SIGN_UP = 'sign-up';
