@@ -11,9 +11,11 @@ const routes: Routes = [
 	{
 		path: '',
 		loadChildren: () =>
-			import('../my-take/external/external.module').then(
-				(m) => m.ExternalModule
-			),
+			import('../my-take/core/core.module').then((m) => m.CoreModule),
+		// loadChildren: () =>
+		// 	import('../my-take/external/external.module').then(
+		// 		(m) => m.ExternalModule
+		// 	),
 	},
 	{
 		path: '**',
