@@ -51,6 +51,8 @@ $myTakeWeb-dark-theme: mat.define-dark-theme(
 	@include mat.all-component-themes($myTakeWeb-theme);
 }
 
+@import 'bootstrap/dist/css/bootstrap-grid.min.css';
+
 html,
 body {
 	height: 100%;
