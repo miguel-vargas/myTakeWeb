@@ -1,0 +1,15 @@
+.take-row::-webkit-scrollbar {
+	height: 6px;
+	overflow-x: scroll;
+	background: #545454;
+	border-radius: 4px;
+}
+
+.take-row::-webkit-scrollbar-thumb {
+	background: #434343;
+	border-radius: 4px;
+}
+
+.take-row {
+	padding-bottom: 1rem;
+}
