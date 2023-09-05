@@ -1,6 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { importProvidersFrom } from '@angular/core';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { Routes, provideRouter } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
@@ -32,7 +30,7 @@ bootstrapApplication(AppComponent, {
 		provideStore(reducers, {
 			metaReducers,
 		}),
-		importProvidersFrom(BrowserModule, CommonModule),
+		provideAnimations(),
 		provideAnimations(),
 	],
 }).catch((err) => console.error(err));
