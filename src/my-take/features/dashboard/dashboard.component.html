@@ -1,51 +1,25 @@
 <my-take-dashboard-search></my-take-dashboard-search>
 <h2>Quick Picks</h2>
-<div class="">
-	<div class="row flex-nowrap overflow-x-scroll take-row">
-		<div class="col-sm-3">
-			<my-take-take-card></my-take-take-card>
-		</div>
-		<div class="col-sm-3">
-			<my-take-take-card></my-take-take-card>
-		</div>
-		<div class="col-sm-3">
-			<my-take-take-card></my-take-take-card>
-		</div>
-		<div class="col-sm-3">
-			<my-take-take-card></my-take-take-card>
-		</div>
-		<div class="col-sm-3">
-			<my-take-take-card></my-take-take-card>
-		</div>
+<div class="row flex-nowrap overflow-x-scroll g-0 take-row">
+	<div
+		class="col-xl-3 col-sm-6 col-12 card-container"
+		*ngFor="let number of [0, 1, 2, 3, 4]">
+		<my-take-take-card></my-take-take-card>
 	</div>
 </div>
 <h2>Most Visited</h2>
-<div class="row">
-	<div class="col-sm-3">
-		<my-take-take-card></my-take-take-card>
-	</div>
-	<div class="col-sm-3">
-		<my-take-take-card></my-take-take-card>
-	</div>
-	<div class="col-sm-3">
-		<my-take-take-card></my-take-take-card>
-	</div>
-	<div class="col-sm-3">
+<div class="row flex-nowrap overflow-x-scroll g-0 take-row">
+	<div
+		class="col-xl-3 col-sm-6 col-12 card-container"
+		*ngFor="let number of [0, 1, 2, 3, 4, 5, 6, 7]">
 		<my-take-take-card></my-take-take-card>
 	</div>
 </div>
 <h2>Highest Rated</h2>
-<div class="row">
-	<div class="col-sm-3">
-		<my-take-take-card></my-take-take-card>
-	</div>
-	<div class="col-sm-3">
-		<my-take-take-card></my-take-take-card>
-	</div>
-	<div class="col-sm-3">
-		<my-take-take-card></my-take-take-card>
-	</div>
-	<div class="col-sm-3">
+<div class="row flex-nowrap overflow-x-scroll g-0 take-row">
+	<div
+		class="col-xl-3 col-sm-6 col-12 card-container"
+		*ngFor="let number of [0, 1, 2]">
 		<my-take-take-card></my-take-take-card>
 	</div>
 </div>

@@ -13,3 +13,11 @@
 .take-row {
 	padding-bottom: 1rem;
 }
+
+.card-container {
+	margin-right: 1.5rem;
+}
+
+.card-container:last-child {
+	margin-right: 0;
+}
