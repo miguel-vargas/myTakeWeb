@@ -1,14 +1,21 @@
 import { TestBed } from '@angular/core/testing';
-import { CanMatchFn } from '@angular/router';
-
+import { CanMatchFn, Route, provideRouter } from '@angular/router';
+import { LoginComponent } from '@features/login/login.component';
+import { RouterPath } from '@shared/constants/routes';
 import { authCanMatchGuard } from './auth-can-match.guard';
 
 describe('authCanMatchGuard', () => {
+	const routes: Route[] = [
+		{ path: RouterPath.LOGIN, component: LoginComponent },
+	];
+
 	const executeGuard: CanMatchFn = (...guardParameters) =>
 		TestBed.runInInjectionContext(() => authCanMatchGuard(...guardParameters));
 
-	beforeEach(() => {
-		TestBed.configureTestingModule({});
+	beforeEach(async () => {
+		TestBed.configureTestingModule({
+			providers: [provideRouter(routes)],
+		});
 	});
 
 	it('should be created', () => {
