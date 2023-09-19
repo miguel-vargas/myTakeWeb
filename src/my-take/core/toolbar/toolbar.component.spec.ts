@@ -24,9 +24,9 @@ describe('ToolbarComponent', () => {
 		expect(component).toBeTruthy();
 	});
 
-	it('should have sidnav button and profile button', async () => {
+	it('should have a profile button', async () => {
 		const buttons = await loader.getAllHarnesses(MatButtonHarness);
 
-		expect(buttons.length).toBe(2);
+		expect(buttons.length).toBe(1);
 	});
 });

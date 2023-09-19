@@ -3,18 +3,19 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { Routes, provideRouter } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
 import { provideStore } from '@ngrx/store';
-import { RouterPath } from '@shared/constants/routes';
+import { authCanMatchGuard } from '@shared/guards/auth-can-match.guard';
 import { AppEffects } from '@state/effects/app.effects';
 import { metaReducers, reducers } from '@state/reducers';
 import { AppComponent } from './app/app.component';
 
 const APP_ROUTES: Routes = [
 	{
-		path: RouterPath.APP,
-		loadChildren: () => import('./my-take/core/core.routes'),
+		path: '',
+		loadChildren: () => import('./my-take/external/external.routes'),
 	},
 	{
 		path: '',
+		canMatch: [authCanMatchGuard],
 		loadChildren: () => import('./my-take/core/core.routes'),
 	},
 	{

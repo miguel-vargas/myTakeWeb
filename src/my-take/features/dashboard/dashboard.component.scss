@@ -1,3 +1,17 @@
+.take-row {
+	padding-bottom: 1rem;
+	--mask: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 1) 0,
+			rgba(0, 0, 0, 1) 95%,
+			rgba(0, 0, 0, 0) 100%,
+			rgba(0, 0, 0, 0) 0
+		)
+		100% 50% / 100% 100% repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+}
+
 .take-row::-webkit-scrollbar {
 	height: 6px;
 	overflow-x: scroll;
@@ -10,6 +24,12 @@
 	border-radius: 4px;
 }
 
-.take-row {
-	padding-bottom: 1rem;
+.g-0 {
+	my-take-take-card {
+		margin-right: 1.5rem;
+	}
+
+	my-take-take-card:last-child {
+		margin-right: 0;
+	}
 }
