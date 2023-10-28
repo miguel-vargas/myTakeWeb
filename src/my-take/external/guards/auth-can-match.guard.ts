@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { CanMatchFn, Router } from '@angular/router';
-import { RouterPath } from '@shared/constants/routes';
+import { RouterPath } from '../constants/routes';
 
 export const authCanMatchGuard: CanMatchFn = (route, segments) => {
 	const router: Router = inject(Router);

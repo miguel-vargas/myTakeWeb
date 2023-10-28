@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { RouterPath } from '@shared/constants/routes';
-import { authCanActivateGuard } from '@shared/guards/auth-can-activate.guard';
+import { authCanActivateGuard } from 'src/my-take/external/guards/auth-can-activate.guard';
+import { RouterPath } from './constants/routes';
 import { CoreComponent } from './core.component';
 
 const CORE_ROUTES: Routes = [
@@ -12,14 +12,9 @@ const CORE_ROUTES: Routes = [
 			{
 				path: RouterPath.DASHBOARD,
 				loadComponent: () =>
-					import('../features/dashboard/dashboard.component').then(
+					import('./features/dashboard/dashboard.component').then(
 						(m) => m.DashboardComponent
 					),
-			},
-			{
-				path: '',
-				pathMatch: 'full',
-				redirectTo: RouterPath.DASHBOARD,
 			},
 		],
 	},

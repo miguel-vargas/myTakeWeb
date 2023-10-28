@@ -3,10 +3,10 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { Routes, provideRouter } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
 import { provideStore } from '@ngrx/store';
-import { authCanMatchGuard } from '@shared/guards/auth-can-match.guard';
 import { AppEffects } from '@state/effects/app.effects';
 import { metaReducers, reducers } from '@state/reducers';
 import { AppComponent } from './app/app.component';
+import { authCanMatchGuard } from './my-take/external/guards/auth-can-match.guard';
 
 const APP_ROUTES: Routes = [
 	{
