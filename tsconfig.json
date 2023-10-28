@@ -23,8 +23,7 @@
 		"esModuleInterop": true,
 		"paths": {
 			"@core/*": ["src/my-take/core/*"],
-			"@features/*": ["src/my-take/features/*"],
-			"@shared/*": ["src/my-take/shared/*"],
+			"@external/*": ["src/my-take/external/*"],
 			"@state/*": ["src/my-take/state/*"]
 		}
 	},

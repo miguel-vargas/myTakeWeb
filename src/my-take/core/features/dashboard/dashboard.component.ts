@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { TakeCardComponent } from '../../shared/components/take-card/take-card.component';
+import { TakeCardComponent } from '../../components/take-card/take-card.component';
 import { DashboardSearchComponent } from './dashboard-search/dashboard-search.component';
 
 @Component({

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { CanMatchFn, Route, provideRouter } from '@angular/router';
-import { LoginComponent } from '@features/login/login.component';
-import { RouterPath } from '@shared/constants/routes';
+import { RouterPath } from '@external/constants/routes';
+import { LoginComponent } from '@external/features/login/login.component';
 import { authCanMatchGuard } from './auth-can-match.guard';
 
 describe('authCanMatchGuard', () => {

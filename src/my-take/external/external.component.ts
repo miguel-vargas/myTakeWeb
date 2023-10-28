@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ExternalToolbarComponent } from './external-toolbar/external-toolbar.component';
+import { ExternalToolbarComponent } from './layout/external-toolbar/external-toolbar.component';
 
 @Component({
 	selector: 'my-take-external',

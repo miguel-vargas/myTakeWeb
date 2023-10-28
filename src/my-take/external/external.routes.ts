@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { RouterPath } from '@shared/constants/routes';
+import { RouterPath } from './constants/routes';
 import { ExternalComponent } from './external.component';
 
 const EXTERNAL_ROUTES: Routes = [
@@ -8,25 +8,30 @@ const EXTERNAL_ROUTES: Routes = [
 		component: ExternalComponent,
 		children: [
 			{
-				path: '',
+				path: RouterPath.LANDING,
 				loadComponent: () =>
-					import('../features/landing/landing.component').then(
+					import('./features/landing/landing.component').then(
 						(m) => m.LandingComponent
 					),
 			},
 			{
 				path: RouterPath.LOGIN,
 				loadComponent: () =>
-					import('../features/login/login.component').then(
+					import('./features/login/login.component').then(
 						(m) => m.LoginComponent
 					),
 			},
 			{
 				path: RouterPath.SIGN_UP,
 				loadComponent: () =>
-					import('../features/sign-up/sign-up.component').then(
+					import('./features/sign-up/sign-up.component').then(
 						(m) => m.SignUpComponent
 					),
+			},
+			{
+				path: '',
+				pathMatch: 'full',
+				redirectTo: RouterPath.LANDING,
 			},
 		],
 	},

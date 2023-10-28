@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { TakeCardComponent } from '@shared/components/take-card/take-card.component';
+import { TakeCardComponent } from '@core/components/take-card/take-card.component';
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
