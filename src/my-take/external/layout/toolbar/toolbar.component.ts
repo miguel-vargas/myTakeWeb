@@ -6,9 +6,9 @@ import { RouterLink } from '@angular/router';
 
 @Component({
 	selector: 'my-take-external-toolbar',
-	templateUrl: './external-toolbar.component.html',
-	styleUrls: ['./external-toolbar.component.scss'],
 	standalone: true,
+	templateUrl: './toolbar.component.html',
+	styleUrls: ['./toolbar.component.scss'],
 	imports: [MatToolbarModule, MatButtonModule, MatIconModule, RouterLink],
 })
-export class ExternalToolbarComponent {}
+export class ToolbarComponent {}
