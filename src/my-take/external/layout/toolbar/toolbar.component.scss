@@ -6,6 +6,12 @@
 		display: flex;
 		align-items: center;
 	}
+
+	a.toolbar-section {
+		text-decoration: none;
+		color: inherit;
+		cursor: pointer;
+	}
 }
 
 .logo {

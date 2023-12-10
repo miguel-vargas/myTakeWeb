@@ -4,11 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ExternalToolbarComponent } from './external-toolbar.component';
+import { ToolbarComponent } from './toolbar.component';
 
 describe('ExternalToolbarComponent', () => {
-	let component: ExternalToolbarComponent;
-	let fixture: ComponentFixture<ExternalToolbarComponent>;
+	let component: ToolbarComponent;
+	let fixture: ComponentFixture<ToolbarComponent>;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({
@@ -16,12 +16,12 @@ describe('ExternalToolbarComponent', () => {
 				MatToolbarModule,
 				MatButtonModule,
 				RouterLink,
-				ExternalToolbarComponent,
+				ToolbarComponent,
 				RouterTestingModule,
 			],
 		});
 
-		fixture = TestBed.createComponent(ExternalToolbarComponent);
+		fixture = TestBed.createComponent(ToolbarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

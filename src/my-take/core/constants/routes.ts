@@ -1,7 +1,7 @@
 export class RouterPath {
 	static readonly DASHBOARD = 'dashboard';
 	static readonly TAKES = 'takes';
-	static readonly LOCATIONS = 'locations';
+	static readonly PLACES = 'places';
 }
 
 // Not currently in use (maybe a sidenav?)

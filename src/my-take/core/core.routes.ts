@@ -16,6 +16,13 @@ const CORE_ROUTES: Routes = [
 						(m) => m.DashboardComponent
 					),
 			},
+			{
+				path: RouterPath.PLACES,
+				loadComponent: () =>
+					import('./features/places/places.component').then(
+						(m) => m.PlacesComponent
+					),
+			},
 		],
 	},
 ];

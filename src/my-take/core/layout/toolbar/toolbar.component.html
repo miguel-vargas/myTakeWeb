@@ -1,9 +1,10 @@
 <mat-toolbar color="primary" class="toolbar">
-	<div class="toolbar-section">
+	<a class="toolbar-section" routerLink="dashboard">
 		<mat-icon>restaurant</mat-icon>
 		<span>myTake</span>
-	</div>
+	</a>
 	<div class="toolbar-section">
+		<a mat-stroked-button routerLink="places">Places</a>
 		<button mat-button [matMenuTriggerFor]="menu">Insert Username</button>
 		<mat-menu #menu="matMenu">
 			<a mat-menu-item routerLink="./">Logout</a>
