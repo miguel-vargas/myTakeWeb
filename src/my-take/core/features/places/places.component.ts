@@ -1,14 +1,18 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { PlaceCardComponent } from '@core/components/place-card/place-card.component';
+import { Observable } from 'rxjs';
+import { Place } from 'src/my-take/data/models/place';
+import { PlaceService } from 'src/my-take/data/services/place.service';
 
 @Component({
   selector: 'my-take-places',
   standalone: true,
-  imports: [PlaceCardComponent, NgFor],
+  imports: [PlaceCardComponent, NgFor, NgIf, AsyncPipe],
   templateUrl: './places.component.html',
   styleUrls: ['./places.component.scss']
 })
 export class PlacesComponent {
-
+  placeService: PlaceService = inject(PlaceService);
+  places$: Observable<Place[]> = this.placeService.getPlaces();
 }
