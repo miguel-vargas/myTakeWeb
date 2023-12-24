@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { SearchComponent } from '@core/components/search/search.component';
 
 @Component({
     selector: 'my-take-dashboard-search',
@@ -14,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatFormFieldModule,
         MatInputModule,
         MatIconModule,
+        SearchComponent,
     ],
 })
 export class DashboardSearchComponent {

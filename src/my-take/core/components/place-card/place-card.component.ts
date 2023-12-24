@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { Place } from 'src/my-take/data/models/place';
 
 @Component({
   selector: 'my-take-place-card',
@@ -10,5 +11,5 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./place-card.component.scss']
 })
 export class PlaceCardComponent {
-
+  @Input({ required: true }) place!: Place;
 }
