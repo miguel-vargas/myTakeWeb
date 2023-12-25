@@ -8,3 +8,8 @@
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
 </form>
+<div class="row mt-3" *ngIf="isLoading">
+    <div class="col-12">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+</div>

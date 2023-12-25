@@ -1,9 +1,11 @@
+import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { debounceTime, distinctUntilChanged, tap } from 'rxjs';
 
 @Component({
   selector: 'my-take-search',
@@ -13,6 +15,8 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
       MatFormFieldModule,
       MatInputModule,
       MatIconModule,
+      MatProgressBarModule,
+      NgIf,
   ],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
@@ -24,14 +28,18 @@ export class SearchComponent {
 		searchTerm: new FormControl(''),
 	});
 
+  isLoading = false;
+
   constructor() {
     this.searchForm.controls.searchTerm.valueChanges
       .pipe(
+        tap(() => { this.isLoading = true }),
         debounceTime(400),
         distinctUntilChanged()
       )
       .subscribe(term => {
         if (term !== null) {
+          this.isLoading = false;
           this.onSearch.emit(term.toLowerCase());
         }
       });
