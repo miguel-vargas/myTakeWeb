@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, booleanAttribute } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,6 +22,7 @@ import { debounceTime, distinctUntilChanged, tap } from 'rxjs';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
+  @Input({ transform: booleanAttribute }) showLoading = false;
   @Output() onSearch = new EventEmitter<string>();
 
 	searchForm = new FormGroup({
