@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+
 import { Component, EventEmitter, Input, Output, booleanAttribute } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -11,13 +11,12 @@ import { debounceTime, distinctUntilChanged, tap } from 'rxjs';
   selector: 'my-take-search',
   standalone: true,
   imports: [
-      ReactiveFormsModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatIconModule,
-      MatProgressBarModule,
-      NgIf,
-  ],
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatProgressBarModule
+],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })

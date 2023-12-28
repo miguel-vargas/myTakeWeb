@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'my-take-all-takes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './all-takes.component.html',
   styleUrls: ['./all-takes.component.scss']
 })

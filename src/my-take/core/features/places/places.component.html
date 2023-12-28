@@ -1,8 +1,10 @@
-<ng-container *ngIf="places$ | async as places">
+@if (places$ | async; as places) {
+  <div class="row mb-3">
+    <my-take-search class="col-12" showLoading="true" (onSearch)="searchPlaces($event)"></my-take-search>
+  </div>
+  @for (place of places; track place) {
     <div class="row mb-3">
-        <my-take-search class="col-12" showLoading="true" (onSearch)="searchPlaces($event)"></my-take-search>
+      <my-take-place-card class="col-12" [place]="place"></my-take-place-card>
     </div>
-    <div class="row mb-3" *ngFor="let place of places">
-        <my-take-place-card class="col-12" [place]="place"></my-take-place-card>
-    </div>
-</ng-container>
+  }
+}

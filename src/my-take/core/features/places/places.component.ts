@@ -1,4 +1,4 @@
-import { AsyncPipe, NgFor, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { PlaceCardComponent } from '@core/components/place-card/place-card.component';
 import { SearchComponent } from '@core/components/search/search.component';
@@ -9,7 +9,7 @@ import { PlaceService } from 'src/my-take/data/services/place.service';
 @Component({
   selector: 'my-take-places',
   standalone: true,
-  imports: [PlaceCardComponent, NgFor, NgIf, AsyncPipe, SearchComponent],
+  imports: [PlaceCardComponent, AsyncPipe, SearchComponent],
   templateUrl: './places.component.html',
   styleUrls: ['./places.component.scss']
 })

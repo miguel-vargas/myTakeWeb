@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute } from '@angular/router';
@@ -9,7 +9,7 @@ import { PlaceParams } from './models/place-params';
 @Component({
   selector: 'my-take-place',
   standalone: true,
-  imports: [MatCardModule, NgIf, AsyncPipe],
+  imports: [MatCardModule, AsyncPipe],
   templateUrl: './place.component.html',
   styleUrls: ['./place.component.scss']
 })
