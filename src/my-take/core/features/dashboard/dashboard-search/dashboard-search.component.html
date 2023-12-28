@@ -1,14 +1,5 @@
 <div class="search-container">
 	<div class="form-container">
-		<form [formGroup]="searchForm" class="row">
-			<mat-form-field
-				class="col-sm-12"
-				subscriptSizing="dynamic"
-				appearance="outline">
-				<mat-label>Search</mat-label>
-				<input matInput [formControlName]="'searchTerm'" />
-				<mat-icon matSuffix>search</mat-icon>
-			</mat-form-field>
-		</form>
+		<my-take-search showLoading="false"></my-take-search>
 	</div>
 </div>
