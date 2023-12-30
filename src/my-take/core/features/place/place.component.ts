@@ -2,8 +2,8 @@ import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute } from '@angular/router';
+import { PlaceService } from '@data/services/place.service';
 import { switchMap } from 'rxjs';
-import { PlaceService } from 'src/my-take/data/services/place.service';
 import { PlaceParams } from './models/place-params';
 
 @Component({

@@ -24,7 +24,8 @@
 		"paths": {
 			"@core/*": ["src/my-take/core/*"],
 			"@external/*": ["src/my-take/external/*"],
-			"@state/*": ["src/my-take/state/*"]
+			"@state/*": ["src/my-take/state/*"],
+			"@data/*": ["src/my-take/data/*"]
 		}
 	},
 	"angularCompilerOptions": {
