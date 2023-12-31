@@ -25,8 +25,10 @@ describe('ToolbarComponent', () => {
 	});
 
 	it('should have a profile button', async () => {
-		const buttons = await loader.getAllHarnesses(MatButtonHarness);
+		const buttons = await loader.getHarness(
+			MatButtonHarness.with({ selector: '#profile-button' }),
+		);
 
-		expect(buttons.length).toBe(1);
+		expect(buttons).not.toBeNull();
 	});
 });

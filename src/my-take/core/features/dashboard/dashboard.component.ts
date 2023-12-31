@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { TakeCardComponent } from '../../components/take-card/take-card.component';
 import { DashboardSearchComponent } from './dashboard-search/dashboard-search.component';
@@ -8,6 +7,6 @@ import { DashboardSearchComponent } from './dashboard-search/dashboard-search.co
 	templateUrl: './dashboard.component.html',
 	styleUrls: ['./dashboard.component.scss'],
 	standalone: true,
-	imports: [DashboardSearchComponent, TakeCardComponent, NgFor],
+	imports: [DashboardSearchComponent, TakeCardComponent],
 })
 export class DashboardComponent {}

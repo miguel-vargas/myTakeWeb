@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterOutlet } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ExternalComponent } from './external.component';
-import { ExternalToolbarComponent } from './layout/external-toolbar/external-toolbar.component';
+import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 
 describe('ExternalComponent', () => {
 	let component: ExternalComponent;
@@ -12,7 +12,7 @@ describe('ExternalComponent', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			imports: [
-				ExternalToolbarComponent,
+				ToolbarComponent,
 				RouterOutlet,
 				RouterTestingModule,
 				ExternalComponent,

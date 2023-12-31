@@ -24,7 +24,7 @@ describe('authCanMatchGuard', () => {
 
 	it('should return true', async () => {
 		const result = await TestBed.runInInjectionContext(() =>
-			authCanMatchGuard({}, [])
+			authCanMatchGuard({}, []),
 		);
 		expect(result).toBe(true);
 	});

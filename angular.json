@@ -57,11 +57,11 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "myTakeWeb:build:production"
+            			"production": {
+							"buildTarget": "myTakeWeb:build:production"
 						},
-						"development": {
-							"browserTarget": "myTakeWeb:build:development"
+            			"development": {
+              				"buildTarget": "myTakeWeb:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -69,7 +69,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "myTakeWeb:build"
+						"buildTarget": "myTakeWeb:build"
 					}
 				},
 				"test": {

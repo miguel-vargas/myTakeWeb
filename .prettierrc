@@ -3,6 +3,15 @@
   "useTabs": true,
   "singleQuote": true,
   "bracketSpacing": true,
-  "bracketSameLine": true,
-  "arrowParens": "always"
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "singleAttributePerLine": true,
+  "overrides": [
+		{
+			"files": ["*.html"],
+			"options": {
+				"parser": "angular"
+			}
+		}
+	]
 }

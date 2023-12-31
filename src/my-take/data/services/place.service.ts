@@ -4,22 +4,21 @@ import { placeMocks } from '../mocks/place-mocks';
 import { Place } from '../models/place';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
 export class PlaceService {
+	constructor() {}
 
-  constructor() { }
+	getPlaces(): Observable<Place[]> {
+		return of(placeMocks);
+	}
 
-  getPlaces(): Observable<Place[]> {
-    return of(placeMocks)
-  }
+	getPlaceById(id: string): Observable<Place> {
+		const place = placeMocks.find((p) => p.id === id);
+		if (place !== undefined) {
+			return of(place);
+		}
 
-  getPlaceById(id: string): Observable<Place> {
-    const place = placeMocks.find(p => p.id === id);
-    if (place !== undefined) {
-      return of(place);
-    }
-
-    throw new Error('Place not found.');
-  }
+		throw new Error('Place not found.');
+	}
 }
