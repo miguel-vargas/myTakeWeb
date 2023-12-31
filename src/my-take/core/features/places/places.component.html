@@ -3,7 +3,7 @@
 		<my-take-search
 			class="col-12"
 			showLoading="true"
-			(searched)="searchPlaces($event)"
+			(searched)="onSearched($event)"
 		></my-take-search>
 	</div>
 	@for (place of places; track place) {

@@ -37,7 +37,7 @@ export class PlacesComponent {
 		}),
 	);
 
-	searchPlaces(searchTerm: string) {
+	onSearched(searchTerm: string) {
 		this.searchTerm$.next(searchTerm);
 	}
 }
