@@ -6,17 +6,17 @@ import { MatInputModule } from '@angular/material/input';
 import { SearchComponent } from '@core/components/search/search.component';
 
 @Component({
-    selector: 'my-take-dashboard-search',
-    templateUrl: './dashboard-search.component.html',
-    styleUrls: ['./dashboard-search.component.scss'],
-    standalone: true,
-    imports: [
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        SearchComponent,
-    ],
+	selector: 'my-take-dashboard-search',
+	templateUrl: './dashboard-search.component.html',
+	styleUrls: ['./dashboard-search.component.scss'],
+	standalone: true,
+	imports: [
+		ReactiveFormsModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatIconModule,
+		SearchComponent,
+	],
 })
 export class DashboardSearchComponent {
 	searchForm = new FormGroup({

@@ -25,7 +25,9 @@ describe('ToolbarComponent', () => {
 	});
 
 	it('should have a profile button', async () => {
-		const buttons = await loader.getHarness(MatButtonHarness.with({selector: '#profile-button'}));
+		const buttons = await loader.getHarness(
+			MatButtonHarness.with({ selector: '#profile-button' }),
+		);
 
 		expect(buttons).not.toBeNull();
 	});

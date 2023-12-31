@@ -11,21 +11,21 @@ const EXTERNAL_ROUTES: Routes = [
 				path: RouterPath.LANDING,
 				loadComponent: () =>
 					import('./features/landing/landing.component').then(
-						(m) => m.LandingComponent
+						(m) => m.LandingComponent,
 					),
 			},
 			{
 				path: RouterPath.LOGIN,
 				loadComponent: () =>
 					import('./features/login/login.component').then(
-						(m) => m.LoginComponent
+						(m) => m.LoginComponent,
 					),
 			},
 			{
 				path: RouterPath.SIGN_UP,
 				loadComponent: () =>
 					import('./features/sign-up/sign-up.component').then(
-						(m) => m.SignUpComponent
+						(m) => m.SignUpComponent,
 					),
 			},
 			{

@@ -10,7 +10,7 @@ import { authCanActivateGuard } from './auth-can-activate.guard';
 describe('authCanActivateGuard', () => {
 	const executeGuard: CanActivateFn = (...guardParameters) =>
 		TestBed.runInInjectionContext(() =>
-			authCanActivateGuard(...guardParameters)
+			authCanActivateGuard(...guardParameters),
 		);
 
 	beforeEach(() => {
@@ -25,8 +25,8 @@ describe('authCanActivateGuard', () => {
 		const result = await TestBed.runInInjectionContext(() =>
 			authCanActivateGuard(
 				{} as ActivatedRouteSnapshot,
-				{} as RouterStateSnapshot
-			)
+				{} as RouterStateSnapshot,
+			),
 		);
 		expect(result).toBe(true);
 	});
