@@ -24,12 +24,12 @@ describe('PlacesComponent', () => {
 		it('should update searchTerm', () => {
 			// arrange
 			const searchedValue = 'searchedValue';
-	
+
 			//act
-			component.onSearched(searchedValue)
-	
+			component.onSearched(searchedValue);
+
 			// assert
 			expect(component.searchTerm$.value).toBe(searchedValue);
 		});
-	})
+	});
 });

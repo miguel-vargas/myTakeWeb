@@ -1,3 +1,3 @@
 export const FORM_CONFIG: { defaultDebounceTime: number } = {
-    defaultDebounceTime: 400
-}
+	defaultDebounceTime: 400,
+};
