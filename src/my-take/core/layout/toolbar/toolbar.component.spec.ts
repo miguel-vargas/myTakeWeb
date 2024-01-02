@@ -25,10 +25,25 @@ describe('ToolbarComponent', () => {
 	});
 
 	it('should have a profile button', async () => {
-		const buttons = await loader.getHarness(
+		const profileButton = await loader.getHarness(
 			MatButtonHarness.with({ selector: '#profile-button' }),
 		);
 
-		expect(buttons).not.toBeNull();
+		expect(profileButton).not.toBeNull();
 	});
+
+	// Produces error: Expected to be running in 'ProxyZone', but it was not found.
+	// it('should have a logout button', async () => {
+	// 	const profileButton = await loader.getHarness(
+	// 		MatButtonHarness.with({ selector: '#profile-button' }),
+	// 	);
+
+	// 	profileButton.click();
+
+	// 	const logoutButton = await loader.getHarness(
+	// 		MatButtonHarness.with({ selector: '#logout-button' }),
+	// 	);
+
+	// 	expect(logoutButton).not.toBeNull();
+	// });
 });
