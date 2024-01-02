@@ -1,17 +1,14 @@
 <form [formGroup]="searchForm" class="row">
-  <mat-form-field
-    class="col-12"
-    subscriptSizing="dynamic"
-    appearance="outline">
-    <mat-label>Search</mat-label>
-    <input matInput [formControlName]="'searchTerm'" />
-    <mat-icon matSuffix>search</mat-icon>
-  </mat-form-field>
+	<mat-form-field class="col-12" subscriptSizing="dynamic" appearance="outline">
+		<mat-label>Search</mat-label>
+		<input matInput [formControlName]="'searchTerm'" />
+		<mat-icon matSuffix>search</mat-icon>
+	</mat-form-field>
 </form>
 @if (showLoading && isLoading) {
-  <div class="row mt-3">
-    <div class="col-12">
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    </div>
-  </div>
+	<div class="row mt-3">
+		<div class="col-12">
+			<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+		</div>
+	</div>
 }

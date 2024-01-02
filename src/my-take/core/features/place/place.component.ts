@@ -1,7 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PlaceService } from '@data/services/place.service';
 import { switchMap } from 'rxjs';
 import { PlaceParams } from './models/place-params';
@@ -9,7 +9,7 @@ import { PlaceParams } from './models/place-params';
 @Component({
 	selector: 'my-take-place',
 	standalone: true,
-	imports: [MatCardModule, AsyncPipe],
+	imports: [MatCardModule, AsyncPipe, RouterLink],
 	templateUrl: './place.component.html',
 	styleUrls: ['./place.component.scss'],
 })

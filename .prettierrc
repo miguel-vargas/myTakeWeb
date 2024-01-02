@@ -5,7 +5,7 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "always",
-  "singleAttributePerLine": true,
+  "singleAttributePerLine": false,
   "overrides": [
 		{
 			"files": ["*.html"],
