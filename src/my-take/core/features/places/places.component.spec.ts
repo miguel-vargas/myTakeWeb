@@ -19,4 +19,17 @@ describe('PlacesComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy();
 	});
+
+	describe('onSearched', () => {
+		it('should update searchTerm', () => {
+			// arrange
+			const searchedValue = 'searchedValue';
+
+			//act
+			component.onSearched(searchedValue);
+
+			// assert
+			expect(component.searchTerm$.value).toBe(searchedValue);
+		});
+	});
 });

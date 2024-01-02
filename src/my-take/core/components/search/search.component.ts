@@ -5,11 +5,13 @@ import {
 	Output,
 	booleanAttribute,
 } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { FORM_CONFIG } from '@core/constants/form-config';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs';
 
 @Component({
@@ -29,26 +31,25 @@ export class SearchComponent {
 	@Input({ transform: booleanAttribute }) showLoading = false;
 	@Output() searched = new EventEmitter<string>();
 
-	searchForm = new FormGroup({
-		searchTerm: new FormControl(''),
+	searchForm = this.fb.group({
+		searchTerm: [''],
 	});
 
 	isLoading = false;
 
-	constructor() {
+	constructor(private fb: NonNullableFormBuilder) {
 		this.searchForm.controls.searchTerm.valueChanges
 			.pipe(
 				tap(() => {
 					this.isLoading = true;
 				}),
-				debounceTime(400),
+				debounceTime(FORM_CONFIG.defaultDebounceTime),
 				distinctUntilChanged(),
+				takeUntilDestroyed(),
 			)
 			.subscribe((term) => {
-				if (term !== null) {
-					this.isLoading = false;
-					this.searched.emit(term.toLowerCase());
-				}
+				this.isLoading = false;
+				this.searched.emit(term.toLowerCase());
 			});
 	}
 }
